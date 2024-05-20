@@ -7,7 +7,6 @@ s3 = boto3.client('s3')
 def main(event, context):
     bucket_name = os.environ['TRIGGERING_BUCKET_NAME']
     file_key = 'kartikey.txt' 
-    s3.Bucket('mybucket').upload_file('/tmp/hello.txt', 'hello.txt')
     s3.put_object(Bucket=bucket_name, Key=file_key, Body='Hello, Kartikey!')
 
     return {
