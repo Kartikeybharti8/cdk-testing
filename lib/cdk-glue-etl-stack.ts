@@ -1,4 +1,4 @@
-import { GlueEtlStackProps } from '../GlueEtlDeploy'
+import { GlueEtlStackProps } from '../EnvConfig/GlueEtlDeploy'
 import * as cdk from 'aws-cdk-lib';
 import * as glue from 'aws-cdk-lib/aws-glue';
 import * as iam from 'aws-cdk-lib/aws-iam';
