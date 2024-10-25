@@ -11,8 +11,13 @@ import * as cdk from 'aws-cdk-lib';
 // import { CdkGlueEtlStack } from '../lib/cdk-glue-etl-stack'
 
 // Step function stack deploy imports
-import { devStepFunctionStackProps } from '../EnvConfig/StepFunctionDeploy/'
-import { CdkStepFunctionStack } from '../lib/cdk-step-function-stack'
+// import { devStepFunctionStackProps } from '../EnvConfig/StepFunctionDeploy/'
+// import { CdkStepFunctionStack } from '../lib/cdk-step-function-stack'
+
+
+// DMS job stack deploy imports
+import { devDmsJobStackProps } from '../EnvConfig/DmsJobDeploy'
+import { CdkDmsStack } from '../lib/cdk-dms-stack'
 
 const app = new cdk.App();
 
@@ -23,4 +28,7 @@ const app = new cdk.App();
 // new CdkGlueEtlStack(app, 'DevCdkEtlGlueStack', devGlueEtlStackProps);
 
 // Stack for Step-Function service
-new CdkStepFunctionStack(app, 'DevCdkStepFunctionStack', devStepFunctionStackProps);
+// new CdkStepFunctionStack(app, 'DevCdkStepFunctionStack', devStepFunctionStackProps);
+
+// Stack for DMS service
+new CdkDmsStack(app, 'DevDmsStack', devDmsJobStackProps);
